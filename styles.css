@@ -181,7 +181,7 @@ section{
     bottom: 310px;
 }
 .visit{
-  background: url('../images/visit.png');
+  background: #EFEFEF;
   background-size: cover;
   background-position: center;
   
@@ -265,7 +265,7 @@ section{
       max-width: 80%;
       margin: 0 auto;
   }
-  
+
 }
 @media only screen and (max-width: 786px){
   .nav-button{
