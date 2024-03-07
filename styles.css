@@ -88,6 +88,10 @@ body {
     
     
 }
+.banner img{
+   background-attachment: fixed;
+    overflow: hidden;
+}
 
 p {
     font-size: 30px;
@@ -103,6 +107,14 @@ p {
    color: #7296a4;
    margin-right: 130px;
    margin-top: -10px;
+   font-size: 16px;
+}
+.btn-secondary2 {
+  size: large;
+  color: #7296a4;
+  margin-right: 130px;
+  margin-top: -10px;
+  font-size: 20px;
 }
 section{
     padding: 5rem 7%;
@@ -168,4 +180,131 @@ section{
     position: relative;
     bottom: 310px;
 }
- 
+.visit{
+  background: url('../images/visit.png');
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+.visit .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.visit .row .image{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.visit .row .image img{
+  width: 75%;
+}
+
+.visit .row form{
+  flex: 0 40rem;
+  border: 0.1rem solid var #7296a4;
+  padding: 2rem;
+}
+
+.visit .row form h3{
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--main-color);
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.visit .row form .inputBox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--main-color);
+  border:var(--border);
+}
+
+.visit .row form .inputBox input{
+  width: 65%;
+  padding:10px;
+  font-size: 16px;
+  color:var(--white);
+  text-transform: none;
+  background:none;
+  align-items: center;
+  justify-content: center;
+}
+.success-message {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+  display: none; /* Initially hide the success message */
+}
+@media only screen and (max-width: 786px) {
+  .mainsec {
+      padding: 20px;
+  }
+  .firstrow,
+  .Secondrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .mainimg,
+  .mainimg2 {
+      margin-bottom: 20px;
+  }
+  .rowcontent,
+  .rowcontent2 {
+      max-width: 80%;
+      margin: 0 auto;
+  }
+  
+}
+@media only screen and (max-width: 786px){
+  .nav-button{
+      display: none;
+  }
+  .nav.responsive{
+      top: 100px;
+  }
+  .nav{
+      position: absolute;
+      top: -800px;
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      height: 90vh;
+      backdrop-filter: blur(20px);
+      transition: .3s;
+  }
+  .nav ul{
+      flex-direction: column;
+      text-align: center;
+  }
+  .nav-menu-btn{
+      display: block;
+  }
+  .nav-menu-btn i{
+      font-size: 25px;
+      color: #fff;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .3s;
+  }
+  .nav-menu-btn i:hover{
+      background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+
+

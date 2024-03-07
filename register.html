@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registration Form</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var registerButton = document.querySelector('.btn-secondary2');
+      var successMessage = document.querySelector('.success-message');
+  
+      registerButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        // Show success message
+        successMessage.textContent = "Successfully registered!";
+        successMessage.style.display = 'block';
+  
+        // Optional: You may want to hide the message after a few seconds
+        setTimeout(function() {
+          successMessage.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <section class="visit" id="visit">
+    <div class="row">
+        <form id="registrationForm">
+            <h3>REGISTER</h3>
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="surname" placeholder="Your surname" required>
+            </div>
+            <div class="inputBox">
+                <input type="email" id="email" placeholder="Your e-mail" required>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            </div>
+            <input type="submit" value="Register" class="btn-secondary2" onclick="redirectToIndex()">
+        </form>
+        <div class="success-message">
+            <!-- This content will be filled dynamically -->
+        </div>
+    </div>
+</section>
+<script>
+  function redirectToIndex() {
+      window.location.href = 'index.html';
+  }
+</script>
+<script>
+  document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Get form input values
+      const name = document.getElementById('name').value;
+      const surname = document.getElementById('surname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      
+      // Validate password confirmation
+      if (password !== confirmPassword) {
+          alert("Passwords don't match");
+          return;
+      }
+
+      // Store user data in localStorage
+      const userData = {
+          name: name,
+          surname: surname,
+          email: email,
+          password: password
+      };
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      // Clear form fields
+      document.getElementById('registrationForm').reset();
+
+      // Redirect to index page
+      window.location.href = 'index.html';
+  });
+
+  document.getElementById('signInForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form input values
+      const signInEmail = document.getElementById('signInEmail').value;
+      const signInPassword = document.getElementById('signInPassword').value;
+
+      // Retrieve stored registration details from localStorage
+      const storedUserData = localStorage.getItem('userData');
+
+      if (storedUserData) {
+          const userData = JSON.parse(storedUserData);
+          if (signInEmail === userData.email && signInPassword === userData.password) {
+              // Clear sign in form
+              document.getElementById('signInForm').reset();
+              // Redirect to index page
+              window.location.href = 'index.html';
+              return;
+          }
+      }
+
+      alert('Invalid email or password.');
+  });
+</script>
+
+</body>
+</html>
