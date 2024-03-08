@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Booking</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="events">
+    <div class="container">
+      <!-- Event 1 -->
+      <div class="item-container">
+        <div class="img-container">
+          <img src="pictures/OIP 2.jfif" alt="Event image">
+        </div>
+        <div class="body-container">
+          <div class="overlay"></div>
+          <div class="event-info">
+            <p class="title">Bubbe's Book Club</p>
+            <div class="separator"></div>
+            <p class="info">Bellmore, NY</p>
+            <p class="price">Free</p>
+            <div class="additional-info">
+              <p class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                Grand Central Terminal
+              </p>
+              <p class="info">
+                <i class="far fa-calendar-alt"></i>
+                Sat, Sep 19, 10:00 AM EDT
+              </p>
+              <p class="info description">
+                Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                to share yours with us! We meet one Sunday evening <span>more...</span>
+              </p>
+            </div>
+          </div>
+          <a href="#" class="action" onclick="openBookingForm(1)">Book it</a>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <!-- Repeat the above structure for other events -->
+
+    </div>
+  </div>
+
+  <!-- Booking Form Modals -->
+  <!-- Event 1 Booking Form -->
+  <div id="bookingModal1" class="booking-modal">
+    <div class="booking-form">
+      <span class="close" onclick="closeBookingForm(1)">&times;</span>
+      <h2>Book Bubbe's Book Club</h2>
+      <form>
+        <!-- Add your form fields here, e.g., contact details, personal information, proof of payment -->
+        <!-- For demonstration purposes, let's add a simple text input for the name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Add more form fields as needed -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event 2 Booking Form -->
+  <!-- Repeat the above modal structure for other events -->
+  <!-- Please add your additional booking form modals here -->
+
+  <!-- Booking Form Modals -->
+  <!-- Event 2 Booking Form -->
+  <div id="bookingModal2" class="booking-modal">
+    <div class="booking-form">
+      <span class="close" onclick="closeBookingForm(2)">&times;</span>
+      <h2>Book The Overstory</h2>
+      <form>
+        <!-- Add your form fields here -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event 3 Booking Form -->
+  <div id="bookingModal3" class="booking-modal">
+    <div class="booking-form">
+      <span class="close" onclick="closeBookingForm(3)">&times;</span>
+      <h2>Book The NY Festival</h2>
+      <form>
+        <!-- Add your form fields here -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event 4 Booking Form -->
+  <div id="bookingModal4" class="booking-modal">
+    <div class="booking-form">
+      <span class="close" onclick="closeBookingForm(4)">&times;</span>
+      <h2>Book Tech Bubble Conf</h2>
+      <form>
+        <!-- Add your form fields here -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal Functionality -->
+  <script>
+    // Function to open the booking form modal for a specific event
+    function openBookingForm(eventId) {
+      var modal = document.getElementById("bookingModal" + eventId);
+      modal.style.display = "block";
+    }
+
+    // Function to close the booking form modal for a specific event
+    function closeBookingForm(eventId) {
+      var modal = document.getElementById("bookingModal" + eventId);
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
