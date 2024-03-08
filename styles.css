@@ -1,189 +1,177 @@
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff#CDDEE5;
-  }
-
-  header {
-   background-color: #fff;
-    padding: 10px ;
-    text-align: center;
-    align-items: center;
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-   align-items: center;
-    padding: 10px 0;
-    margin-right: 6rem;
-  }
-
-  nav a {
-    display: block;
-    padding: 20px 15px;
-    overflow: hidden;
-    width: 100px;
-    text-decoration: none;
-    color: #7296a4;
-    text-align: center;
-    font-size: 14px;  
-    float: right;
-    
-   
-  }
-  li{
-    align-items: center;
-    float: left;
-    margin-left: -10px;
-  }
-  ul{
-    list-style: none;
-    padding:0;
-    margin: 0 0 0 150px;
-    align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff#CDDEE5;
 }
 
-  nav a:hover {
-    color: #007bff;
-  }
+header {
+ background-color: #fff;
+  padding: 10px ;
+  text-align: center;
+}
 
-  .content {
-    padding: 10px;
-    background-image: url(pictures\cor.jfif);
-    background-size: cover;
-  }
- .logo{
-    position:absolute;
-    margin-top: 0px;
- } 
- .banner img {
-    height:75
- }
+nav {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px 0;
+
+}
+
+nav a {
+  display: block;
+  padding: 20px 15px;
+  overflow: hidden;
+  width: 100px;
+  text-decoration: none;
+  color: #7296a4;
+  text-align: center;
+  font-size: 14px;  
+  float: right;
+
+
+}
+li{
+  float: right;
+}
+ul{
+  list-style: none;
+  padding:0;
+  margin: 0 0 0 150px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.content {
+  padding: 10px;
+  background-image: url(pictures\cor.jfif);
+  background-size: cover;
+}
+.logo{
+  position:absolute;
+  margin-top: 0px;
+} 
+.banner img {
+  height:75
+}
 
 
 .intro2 {
-    flex: 1;
-    background-color: #fff;
-   justify-content: center;
+  flex: 1;
+  background-color: #fff;
+ justify-content: center;
 }
 
 .text {
-    flex: 2;
-    padding-left: 20px; /* Adjust as needed */
-    color: black;
-    
+  flex: 2;
+  padding-left: 20px; /* Adjust as needed */
+  color: black;
+
 }
 
 .intro2 img {
-    
-   
-    shape-outside: url(pictures\pexels-elina-fairytale-3822457.jpg);
-    margin-right: 20px;
-    shape-margin: 20px;
+
+
+  shape-outside: url(pictures\pexels-elina-fairytale-3822457.jpg);
+  margin-right: 20px;
+  shape-margin: 20px;
 }
 
- h2 {
-    font-size: 200px;
-    margin-top: -900px;
-    color: #CDDEE5;
-    letter-spacing: 5px;
-    
-    
-}
-.banner img{
-   background-attachment: fixed;
-    overflow: hidden;
+h2 {
+  font-size: 200px;
+  margin-top: -900px;
+  color: #CDDEE5;
+  letter-spacing: 5px;
+
+
 }
 
 p {
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-top: -70px;
-    margin-right: 170px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #072d44;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: -70px;
+  margin-right: 170px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #072d44;
 }
 
 .btn-secondary {
-   size: large;
-   color: #7296a4;
-   margin-right: 130px;
-   margin-top: -10px;
-   font-size: 16px;
-}
-.btn-secondary2 {
-  size: large;
-  color: #7296a4;
-  margin-right: 130px;
-  margin-top: -10px;
-  font-size: 20px;
+ size: large;
+ color: #7296a4;
+ margin-right: 130px;
+ margin-top: -10px;
 }
 section{
-    padding: 5rem 7%;
-   }
+  padding: 5rem 7%;
+ }
 .mainsec{
-     margin-top: 400px;
-     background-color: #fdf6f9;
-     align-items: center;
-     display: -ms-flexbox;
+   margin-top: 400px;
+   background-color: #fdf6f9;
+   align-items: center;
+   display: -ms-flexbox;
 }  
 .rowcontent p{
-    display:flex;
-    float: left;
-    margin-top: 5px;
-    text-align: right;
-    margin-right: -150px;
-    font-size: 20px;
-    display: flex;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}.rowcontent2 p{
-    display:flex;
-    float: right;
-    margin-top: 5px;
-    text-align: right;
-    margin-right: 150px;
-    font-size: 20px;
-    display: flex;
-    margin-top: -200px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display:flex;
+  float: left;
+  margin-top: -17rem;
+  text-align: right;
+  margin-left: 190px;
+  font-size: 20px;
+  display: flex;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.rowcontent2 p{
+  display:flex;
+  float: right;
+  margin-top: 5px;
+  text-align: right;
+  margin-right: 150px;
+  font-size: 20px;
+  display: flex;
+  margin-top: -200px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .mainimg img{
-    width: 320px;
-    height: 470px;
-   float: right;
-   margin-right: 100px;
+  width: 320px;
+  height: 470px;
+ float: right;
+ margin-right: 100px;
 }
 .mainimg2 img{
-    width: 380px;
-    height: 500px;
-    align-items: end;
-    margin-left: 45px;
-    margin-top: 120px;
- }
-.firstrow h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-    border-radius: 20%;
-    float: left;
-    margin-left: 245px;
+  width: 380px;
+  height: 500px;
+  align-items: end;
+  margin-left: 130px;
+  margin-top: 150px;
+}
+.firstrow  h1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  border-radius: 20%;
+  float: left;
+  margin-left: 370px;
 }
 .Secondrow h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    border-radius: 20%;
-    float: right;
-    margin-right: 245px;
-    margin-bottom: -75px;
-    margin-top: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 20%;
+  float: right;
+  margin-right: 150px;
+  margin-bottom: -75px;
+  margin-top: 15px;
 }
 
 .pregnancy {
-    position: relative;
-    bottom: 310px;
+  position: relative;
+  bottom: 310px;
+  margin-right: -50px;
 }
+
+
 .visit{
   background: #EFEFEF;
   background-size: cover;
