@@ -89,14 +89,7 @@ h2 {
 
 }
 
-p {
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-top: -70px;
-  margin-right: 170px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #072d44;
-}
+
 
 .btn-secondary {
  size: large;
@@ -297,16 +290,16 @@ section{
       background: rgba(255, 255, 255, 0.15);
   }
 }
-.event {
-  min-height: 100vh;
-  width: 100%;
-  font-size: 16px;
-  background: #eee;
-  color: #777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
 
 .container {
   width: 100%;
@@ -437,4 +430,11 @@ section{
 
 .action:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.additional-info {
+  display: none; /* Hide additional info by default */
+}
+
+.item-container:hover .additional-info {
+  display: block; /* Display additional info on hover */
 }
