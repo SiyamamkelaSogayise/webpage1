@@ -49,8 +49,6 @@
                 <a href="pracp.html">
                     <input type="submit" class="submit" value="Sign In">
                   </a>
-                  
-            </div>
             <div class="two-col">
                 <div class="one">
                     <input type="checkbox" id="login-check">
@@ -108,44 +106,102 @@
 
 <script>
    
-   function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
-    } else {
-        i.className = "nav-menu";
-    }
-   }
+    function myMenuFunction() {
+     var i = document.getElementById("navMenu");
  
-</script>
-
+     if(i.className === "nav-menu") {
+         i.className += " responsive";
+     } else {
+         i.className = "nav-menu";
+     }
+    }
+  
+ </script>
+ 
+ <script>
+ 
+     var a = document.getElementById("loginBtn");
+     var b = document.getElementById("registerBtn");
+     var x = document.getElementById("login");
+     var y = document.getElementById("register");
+ 
+     function login() {
+         x.style.left = "4px";
+         y.style.right = "-520px";
+         a.className += " white-btn";
+         b.className = "btn";
+         x.style.opacity = 1;
+         y.style.opacity = 0;
+     }
+ 
+     function register() {
+         x.style.left = "-510px";
+         y.style.right = "5px";
+         a.className = "btn";
+         b.className += " white-btn";
+         x.style.opacity = 0;
+         y.style.opacity = 1;
+     }
+ 
+ </script>
 <script>
-
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
+   
+    function myMenuFunction() {
+     var i = document.getElementById("navMenu");
+ 
+     if(i.className === "nav-menu") {
+         i.className += " responsive";
+     } else {
+         i.className = "nav-menu";
+     }
     }
-
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
-    }
-
-</script>
+ 
+     function signIn() {
+         var email = document.getElementById("loginEmail").value;
+         var password = document.getElementById("loginPassword").value;
+ 
+         // Check if user exists in localStorage
+         var storedUser = localStorage.getItem(email);
+         if (storedUser) {
+             var user = JSON.parse(storedUser);
+             if (user.password === password) {
+                 // Authentication successful, redirect or perform other actions
+                 alert("Login successful!");
+             } else {
+                 alert("Incorrect password!");
+             }
+         } else {
+             alert("User not found!");
+         }
+     }
+ 
+     function registerUser() {
+         var firstName = document.getElementById("registerFirstName").value;
+         var lastName = document.getElementById("registerLastName").value;
+         var email = document.getElementById("registerEmail").value;
+         var password = document.getElementById("registerPassword").value;
+ 
+         // Check if user already exists in localStorage
+         var storedUser = localStorage.getItem(email);
+         if (storedUser) {
+             alert("User already exists!");
+         } else {
+             // Create new user object
+             var newUser = {
+                 firstName: firstName,
+                 lastName: lastName,
+                 email: email,
+                 password: password
+             };
+ 
+             // Store new user in localStorage
+             localStorage.setItem(email, JSON.stringify(newUser));
+             alert("Registration successful!");
+         }
+     }
+ 
+ </script>
+ 
 
 </body>
 </html>

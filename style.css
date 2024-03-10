@@ -184,7 +184,7 @@ header::before {
 .why__content li {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
-  color: var(--primary-color);
+  color: #7296A4;
 }
 
 .hero {
@@ -280,7 +280,7 @@ header::before {
   margin-bottom: 1rem;
   font-size: 3.5rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: #7296A4;
 }
 
 .membership__card h2 sup {
