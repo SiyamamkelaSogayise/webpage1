@@ -1,65 +1,311 @@
-/* Reset CSS */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+    background-color: #fff#CDDEE5;
+  }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+  header {
+   background-color: #fff;
+    padding: 10px ;
     text-align: center;
-}
+    align-items: center;
+  }
 
-nav ul {
-    list-style: none;
-}
+  nav {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    padding: 10px 0;
+    margin-right: 6rem;
+  }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+  nav a {
+    display: block;
+    padding: 20px 15px;
+    overflow: hidden;
+    width: 100px;
     text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
+    color: #7296a4;
     text-align: center;
-    padding: 1rem;
+    font-size: 14px;  
+    float: right;
+    
+   
+  }
+  li{
+    align-items: center;
+    float: left;
+    margin-left: -10px;
+  }
+  ul{
+    list-style: none;
+    padding:0;
+    margin: 0 0 0 150px;
+    align-items: center;
 }
 
-/* Responsive Styles */
+  nav a:hover {
+    color: #007bff;
+  }
 
-@media only screen and (max-width: 768px) {
-    header {
-        padding: 0.5rem;
-    }
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+  .content {
+    padding: 10px;
+    background-image: url(pictures\cor.jfif);
+    background-size: cover;
+  }
+ .logo{
+    position:absolute;
+    margin-top: 0px;
+ } 
+ .banner img {
+    height:75
+ }
+
+
+.intro2 {
+    flex: 1;
+    background-color: #fff;
+   justify-content: center;
 }
 
-@media only screen and (max-width: 480px) {
-    main {
-        padding: 10px;
-    }
+.text {
+    flex: 2;
+    padding-left: 20px; /* Adjust as needed */
+    color: black;
+    
+}
+
+.intro2 img {
+    
+   
+    shape-outside: url(pictures\pexels-elina-fairytale-3822457.jpg);
+    margin-right: 20px;
+    shape-margin: 20px;
+}
+
+ h2 {
+    font-size: 200px;
+    margin-top: -900px;
+    color: #CDDEE5;
+    letter-spacing: 5px;
+    
+    
+}
+.banner img{
+   background-attachment: fixed;
+    overflow: hidden;
+}
+
+p {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: -70px;
+    margin-right: 170px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #072d44;
+}
+
+.btn-secondary {
+   size: large;
+   color: #7296a4;
+   margin-right: 130px;
+   margin-top: -10px;
+   font-size: 16px;
+}
+.btn-secondary2 {
+  size: large;
+  color: #7296a4;
+  margin-right: 130px;
+  margin-top: -10px;
+  font-size: 20px;
+}
+section{
+    padding: 5rem 7%;
+   }
+.mainsec{
+     margin-top: 400px;
+     background-color: #fdf6f9;
+     align-items: center;
+     display: -ms-flexbox;
+}  
+.rowcontent p{
+    display:flex;
+    float: left;
+    margin-top: 5px;
+    text-align: right;
+    margin-right: -150px;
+    font-size: 20px;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}.rowcontent2 p{
+    display:flex;
+    float: right;
+    margin-top: 5px;
+    text-align: right;
+    margin-right: 150px;
+    font-size: 20px;
+    display: flex;
+    margin-top: -200px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.mainimg img{
+    width: 320px;
+    height: 470px;
+   float: right;
+   margin-right: 100px;
+}
+.mainimg2 img{
+    width: 380px;
+    height: 500px;
+    align-items: end;
+    margin-left: 45px;
+    margin-top: 120px;
+ }
+.firstrow h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    border-radius: 20%;
+    float: left;
+    margin-left: 245px;
+}
+.Secondrow h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 20%;
+    float: right;
+    margin-right: 245px;
+    margin-bottom: -75px;
+    margin-top: 15px;
+}
+
+.pregnancy {
+    position: relative;
+    bottom: 310px;
+}
+.visit{
+  background: #EFEFEF;
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+.visit .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.visit .row .image{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.visit .row .image img{
+  width: 75%;
+}
+
+.visit .row form{
+  flex: 0 40rem;
+  border: 0.1rem solid var #7296a4;
+  padding: 2rem;
+}
+
+.visit .row form h3{
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--main-color);
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.visit .row form .inputBox{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--main-color);
+  border:var(--border);
+}
+
+.visit .row form .inputBox input{
+  width: 65%;
+  padding:10px;
+  font-size: 16px;
+  color:var(--white);
+  text-transform: none;
+  background:none;
+  align-items: center;
+  justify-content: center;
+}
+.success-message {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+  display: none; /* Initially hide the success message */
+}
+@media only screen and (max-width: 786px) {
+  .mainsec {
+      padding: 20px;
+  }
+  .firstrow,
+  .Secondrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .mainimg,
+  .mainimg2 {
+      margin-bottom: 20px;
+  }
+  .rowcontent,
+  .rowcontent2 {
+      max-width: 80%;
+      margin: 0 auto;
+  }
+
+}
+@media only screen and (max-width: 786px){
+  .nav-button{
+      display: none;
+  }
+  .nav.responsive{
+      top: 100px;
+  }
+  .nav{
+      position: relative;
+      top: -800px;
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      height: 90vh;
+      backdrop-filter: blur(20px);
+      transition: .3s;
+  }
+  .nav ul{
+      flex-direction: column;
+      text-align: center;
+  }
+  .nav-menu-btn{
+      display: block;
+  }
+  .nav-menu-btn i{
+      font-size: 25px;
+      color: #fff;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .3s;
+  }
+  .nav-menu-btn i:hover{
+      background: rgba(255, 255, 255, 0.15);
+  }
 }
