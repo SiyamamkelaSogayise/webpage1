@@ -14,9 +14,7 @@
         <div class="nav-logo">
             <p>YOGA .</p>
         </div>
-        <div class="nav-menu" id="navMenu">
-            
-        </div>
+        
         <div class="nav-button">
             <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
             <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
@@ -25,7 +23,6 @@
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
         </div>
     </nav>
-    
 
 <!----------------------------- Form box ----------------------------------->    
     <div class="form-box">
@@ -38,17 +35,16 @@
                 <header>Login</header>
             </div>
             <div class="input-box">
-                <input type="text" id="email" class="input-field" placeholder="Username or Email" required>
+                <input type="text" class="input-field" placeholder="Username or Email">
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" id="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Password">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <a href="pracp.html">
-                    <input type="submit" class="submit" value="Sign In">
-                  </a>
+                <input type="submit" class="submit" value="Sign In">
+            </div>
             <div class="two-col">
                 <div class="one">
                     <input type="checkbox" id="login-check">
@@ -68,27 +64,24 @@
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Firstname" required>
+                    <input type="text" class="input-field" placeholder="Firstname">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Lastname" required>
+                    <input type="text" class="input-field" placeholder="Lastname">
                     <i class="bx bx-user"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Email">
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Password">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <a href="pracp.html">
-                    <input type="submit" class="submit" value="Register">
-                  </a>
-                  
+                <input type="submit" class="submit" value="Register">
             </div>
             <div class="two-col">
                 <div class="one">
@@ -106,102 +99,44 @@
 
 <script>
    
-    function myMenuFunction() {
-     var i = document.getElementById("navMenu");
- 
-     if(i.className === "nav-menu") {
-         i.className += " responsive";
-     } else {
-         i.className = "nav-menu";
-     }
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
     }
-  
- </script>
+   }
  
- <script>
- 
-     var a = document.getElementById("loginBtn");
-     var b = document.getElementById("registerBtn");
-     var x = document.getElementById("login");
-     var y = document.getElementById("register");
- 
-     function login() {
-         x.style.left = "4px";
-         y.style.right = "-520px";
-         a.className += " white-btn";
-         b.className = "btn";
-         x.style.opacity = 1;
-         y.style.opacity = 0;
-     }
- 
-     function register() {
-         x.style.left = "-510px";
-         y.style.right = "5px";
-         a.className = "btn";
-         b.className += " white-btn";
-         x.style.opacity = 0;
-         y.style.opacity = 1;
-     }
- 
- </script>
+</script>
+
 <script>
-   
-    function myMenuFunction() {
-     var i = document.getElementById("navMenu");
- 
-     if(i.className === "nav-menu") {
-         i.className += " responsive";
-     } else {
-         i.className = "nav-menu";
-     }
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
     }
- 
-     function signIn() {
-         var email = document.getElementById("loginEmail").value;
-         var password = document.getElementById("loginPassword").value;
- 
-         // Check if user exists in localStorage
-         var storedUser = localStorage.getItem(email);
-         if (storedUser) {
-             var user = JSON.parse(storedUser);
-             if (user.password === password) {
-                 // Authentication successful, redirect or perform other actions
-                 alert("Login successful!");
-             } else {
-                 alert("Incorrect password!");
-             }
-         } else {
-             alert("User not found!");
-         }
-     }
- 
-     function registerUser() {
-         var firstName = document.getElementById("registerFirstName").value;
-         var lastName = document.getElementById("registerLastName").value;
-         var email = document.getElementById("registerEmail").value;
-         var password = document.getElementById("registerPassword").value;
- 
-         // Check if user already exists in localStorage
-         var storedUser = localStorage.getItem(email);
-         if (storedUser) {
-             alert("User already exists!");
-         } else {
-             // Create new user object
-             var newUser = {
-                 firstName: firstName,
-                 lastName: lastName,
-                 email: email,
-                 password: password
-             };
- 
-             // Store new user in localStorage
-             localStorage.setItem(email, JSON.stringify(newUser));
-             alert("Registration successful!");
-         }
-     }
- 
- </script>
- 
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+</script>
 
 </body>
 </html>
