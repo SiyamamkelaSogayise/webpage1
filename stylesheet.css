@@ -122,6 +122,8 @@ p {
 }
 section{
     padding: 5rem 7%;
+    display: flex;
+    flex: 1;
    }
 .mainsec{
      margin-top: 400px;
