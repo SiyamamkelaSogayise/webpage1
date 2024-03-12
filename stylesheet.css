@@ -59,7 +59,7 @@ body {
     margin-top: 0px;
  } 
  .banner img {
-    height:75
+    display: flex;
  }
 
 
