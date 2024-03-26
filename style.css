@@ -163,9 +163,6 @@ header::before {
 .why__image img {
   max-width: 800px;
   margin: auto;
- max-height: 700px;
- margin-bottom: -200px;
- 
 }
 
 .why__content .section__header {
