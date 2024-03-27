@@ -111,7 +111,7 @@
                             </p>
                         </div>
                     </div>
-                    <a href="" class="action" onclick="openBookingForm(1)">Book it</a>
+                    <a href="" class="action" onclick="submitPersonalDetails(2)">Book it</a>
     
                 </div>
             </div>
@@ -181,7 +181,7 @@
                             </p>
                         </div>
                     </div>
-                    <a href="" class="action" onclick="closeBookingForm(3)">Book it</a>
+                    <a href="" class="action" onclick="openBookingForm(2)">Book it</a>
     
                 </div>
             </div>
@@ -217,7 +217,7 @@
                             </p>
                         </div>
                     </div>
-                    <button class="action">Book it</button>
+                    <a href="" class="action" onclick="openBookingForm(2)">Book it</a>
                 </div>
             </div>
     
@@ -251,7 +251,7 @@
                             </p>
                         </div>
                     </div>
-                    <button class="action">Book it</button>
+                    <a href="" class="action" onclick="openBookingForm(2)">Book it</a>
                 </div>
             </div>
     
@@ -285,11 +285,30 @@
                             </p>
                         </div>
                     </div>
-                    <button class="action">Book it</button>
+                    <a href="" class="action" onclick="openBookingForm(2)">Book it</a>
                 </div>
             </div>
     </div> 
     </section>
+<!-- First Form: Personal Details Only -->
+<form id="personalDetailsForm" style="display: none;">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <button onclick="submitPersonalDetails(2)">Submit</button>
+</form>
+
+<!-- Second Form: Personal Details and Proof of Payment Upload -->
+<form id="paymentDetailsForm" style="display: none;">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="proofOfPayment">Proof of Payment:</label>
+  <input type="file" id="proofOfPayment" name="proofOfPayment"><br><br>
+  <button onclick="submitPaymentDetails(1)">Submit</button>
+</form>
 
     <section class="membership" id="membership">
       <div class="section__container membership__container">
@@ -351,7 +370,28 @@
         </div>
       </div>
     </section>
-
+    <section id="contact">
+      <p class="section__subheader">Get in Touch</p>
+      <h1 class="section__header">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./pictures/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:siyamamkela.sogayise@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./pictures/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/siyamamkela-sogayise-9b6710273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">
@@ -373,6 +413,24 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
+      <script>
+    function openBookingForm(formNumber) {
+        if (formNumber === 1) {
+            document.getElementById("personalDetailsForm").style.display = "block";
+            document.getElementById("paymentDetailsForm").style.display = "none";
+        } else if (formNumber === 2) {
+            document.getElementById("personalDetailsForm").style.display = "none";
+            document.getElementById("paymentDetailsForm").style.display = "block";
+        }
+    }
+
+    function submitPersonalDetails() {
+        // Code to submit personal details form
+    }
+
+    function submitPaymentDetails() {
+        // Code to submit payment details form
+    }
+</script>
   </body>
 </html>
